@@ -1,5 +1,6 @@
 <script>
   import '$lib/scss/base.scss'
+  import { base } from '$app/paths'
 </script>
 
 <svelte:head>
@@ -12,7 +13,7 @@
 </svelte:head>
 
 <header class="header">
-  <a href="/">
+  <a href="{base}/">
     <h1>%</h1>
   </a>
 </header>
