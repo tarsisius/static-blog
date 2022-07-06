@@ -44,8 +44,6 @@ h5 {
     display: inline-block;
     padding: 0 0.5rem;
     margin: 2rem 0;
-    transform: rotate(-0.25deg);
-    filter: drop-shadow(3px 3px 0 #000);
   }
 }
 .main {
@@ -58,52 +56,40 @@ h5 {
 
   .card {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     margin-bottom: 1.5rem;
     width: 100%;
     background-color: $cl-milk;
-    
+    padding: 0 1rem;
 
-    .card_left {
-      display: flex;
-      flex-direction: column;
-      margin-left: 1rem;
-
-      h2 {
-        margin: 1rem 0 1rem 0;
-      }
-      p {
-        margin: 0 0 1rem 0;
-      }
-
-      div {
-        display: flex;
-        margin-bottom: 1rem;
-
-        a {
-          cursor: pointer;
-          padding: 0.25rem 0.5rem 0.25rem 0;
-          color: $cl-nigga;
-          font-size: 0.75rem;
-          background: $cl-orange;
-          display: inline-block;
-          padding: 0.25rem;
-          transform: rotate(-0.25deg);
-          filter: drop-shadow(3px 3px 0 $cl-tomato);
-          cursor: pointer;
-        }
-      }
+    h2 {
+      margin: 1rem 0 1rem 0;
     }
-    .card_right {
+    p {
+      margin: 0 0 1rem 0;
+    }
+
+    span {
+      margin: 0 0 1rem 0;
       display: flex;
       align-items: center;
 
-      p {
-        writing-mode: vertical-rl;
-        text-orientation: mixed;
+      .date {
+        margin: 0 1rem 0 0;
+        padding: 0.25rem 0.5rem 0.25rem 0;
+        color: $cl-nigga;
+        font-size: 0.75rem;
+        background: $cl-orange;
+        display: inline-block;
+        padding: 0.25rem;
+        transform: rotate(-0.25deg);
+        filter: drop-shadow(3px 3px 0 $cl-tomato);
+      }
+      .category {
         font-weight: 500;
         font-size: 0.85rem;
         opacity: 0.85;
+        color: $cl-primary;
       }
     }
   }
@@ -162,7 +148,7 @@ footer {
     color: $cl-nigga;
     background-color: $cl-milk;
     display: inline-block;
-    padding: .25rem 0.5rem;
+    padding: 0.25rem 0.5rem;
     margin: 2rem 0;
     transform: rotate(-0.25deg);
     filter: drop-shadow(3px 3px 0 #000);
