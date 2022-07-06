@@ -1,7 +1,4 @@
 <script context="module">
-  export const prerender = true
-  export const hydrate = true
-
   export const load = ({ props }) => {
     const post = props.post
     if (!post) {
