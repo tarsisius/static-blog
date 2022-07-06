@@ -1,12 +1,9 @@
 <script context="module">
-  export const load = async ({ fetch }) => {
-    const res = await fetch('/.json')
-    if (!res.ok) {
-      return {
-        status: 404,
-      }
-    }
-    const { posts } = await res.json()
+  export const prerender = true
+  export const hydrate = true
+
+  export const load = ({ props }) => {
+    const posts = props.posts
     return {
       props: {
         posts,

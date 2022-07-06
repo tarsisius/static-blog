@@ -1,12 +1,14 @@
 <script context="module">
-  export const load = async ({ params, fetch }) => {
-    const res = await fetch(`${params.slug}.json`)
-    if (!res.ok) {
+  export const prerender = true
+  export const hydrate = true
+
+  export const load = ({ props }) => {
+    const post = props.post
+    if (!post) {
       return {
         status: 404,
       }
     }
-    const { post } = await res.json()
     return {
       props: {
         post,
