@@ -1,13 +1,9 @@
-import { getPost } from '$lib/markdown'
+import { contentBySlug } from '$lib/content'
 
 export const get = ({ params }) => {
   const slug = params.slug
-  if (slug === '__vite_ping') {
-    return {
-      status: 404,
-    }
-  }
-  const post = getPost(slug)
+
+  const post = contentBySlug(slug)
   return {
     body: {
       post,

@@ -5,14 +5,14 @@
 <article class="card">
   <div class="card_left">
     <h2>
-      <a href={'/' + post.slug}>{post.metadata.title}</a>
+      <a href={'/' + post.slug}>{post.title}</a>
     </h2>
-    <p>{post.metadata.description}</p>
+    <p>{post.description}</p>
     <div>
-      <a href="/">{post.metadata.category}</a>
+      <a href="/">{post.category}</a>
     </div>
   </div>
   <div class="card_right">
-    <p>{post.metadata.date}</p>
+    <p>{post.date}</p>
   </div>
 </article>

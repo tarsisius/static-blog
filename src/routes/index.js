@@ -1,9 +1,9 @@
-import { getPostMetadatas } from '$lib/markdown'
+import { contents } from '$lib/content'
 
 export const get = () => {
   return {
     body: {
-      posts: getPostMetadatas(),
+      posts: contents(),
     },
   }
 }

@@ -21,10 +21,10 @@
 <main class="main">
   <div class="detail">
     <div>
-      <span class="date">{post.metadata.date}</span>
-      <span class="category">{post.metadata.category}</span>
+      <span class="date">{post.date}</span>
+      <span class="category">{post.category}</span>
     </div>
-    <h1>{post.metadata.title}</h1>
+    <h1>{post.title}</h1>
     <article>
       {@html post.html}
     </article>
