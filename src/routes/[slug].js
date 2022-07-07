@@ -1,9 +1,9 @@
-import { contentBySlug } from '$lib/content'
+import { getContentBySlug } from '$lib/content'
 
-export const get = ({ params }) => {
+export const get = async ({ params }) => {
   const slug = params.slug
 
-  const post = contentBySlug(slug)
+  const post = await getContentBySlug(slug)
   return {
     body: {
       post,

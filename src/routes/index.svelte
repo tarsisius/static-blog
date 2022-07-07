@@ -1,6 +1,6 @@
 <script context="module">
-  export const load = ({ props }) => {
-    const posts = props.posts
+  export const load = async ({ props }) => {
+    const posts = await props.posts
     return {
       props: {
         posts,

@@ -1,9 +1,9 @@
-import { contents } from '$lib/content'
+import { getContentIndex } from '$lib/content'
 
-export const get = () => {
+export const get = async () => {
   return {
     body: {
-      posts: contents(),
+      posts: await getContentIndex(),
     },
   }
 }

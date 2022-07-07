@@ -13,7 +13,8 @@ VSCode adalah text editor yang paling populer yang berada dikalangan developer d
 
 ## Python pada VSCode 🐍
 
-```python
-print('hello World')
+```js
+const num = 123
+console.log(num)
 ```
 ![AltText](https://visuallearning.co.id/assets/img/kelas/1602211917191.jpg)
