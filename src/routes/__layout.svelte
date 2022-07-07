@@ -1,6 +1,12 @@
+<script context="module">
+  export const load = async ({ url }) => ({ props: { url } })
+</script>
+
 <script>
   import '$lib/scss/base.scss'
-  import { base } from '$app/paths'
+  import Transition from '../lib/components/transition.svelte'
+
+  export let url
 </script>
 
 <svelte:head>
@@ -13,8 +19,11 @@
 </svelte:head>
 
 <header class="header">
-  <a href="{base}/">
+  <a href="/">
     <h1>%</h1>
   </a>
 </header>
-<slot />
+
+<Transition {url}>
+  <slot />
+</Transition>

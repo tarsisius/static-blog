@@ -7,8 +7,8 @@ body {
   margin: 0;
   font-family: 'Outfit';
   letter-spacing: 0.025ch;
-  background-color: $cl-orange;
-  color: $cl-nigga;
+  background-color: $cl-white-2;
+  color: $cl-black-1;
 }
 
 a {
@@ -40,10 +40,15 @@ h5 {
     font-weight: 700;
     font-size: 2.5rem;
     cursor: pointer;
-    background-color: $cl-milk;
     display: inline-block;
     padding: 0 0.5rem;
     margin: 2rem 0;
+    border-radius: 0.25rem;
+    color: #fff;
+    background: linear-gradient(0deg, #7a44d6 -25.27%, #e148f1 141.04%);
+    box-shadow: 0 3px 15px rgb(121 67 214 / 46%);
+    text-shadow: 0 2px 5px #7742d5;
+    transition: all 556ms ease-in-out;
   }
 }
 .main {
@@ -59,8 +64,10 @@ h5 {
     flex-direction: column;
     margin-bottom: 1.5rem;
     width: 100%;
-    background-color: $cl-milk;
     padding: 0 1rem;
+    background-color: $cl-white-1;  
+    overflow: hidden;
+    box-shadow: 0 10px 21px rgb(173 178 197 / 17%);
 
     h2 {
       margin: 1rem 0 1rem 0;
@@ -68,22 +75,16 @@ h5 {
     p {
       margin: 0 0 1rem 0;
     }
-
     span {
       margin: 0 0 1rem 0;
       display: flex;
       align-items: center;
 
       .date {
+        font-weight: 500;
+        font-size: 0.85rem;
+        opacity: 0.85;
         margin: 0 1rem 0 0;
-        padding: 0.25rem 0.5rem 0.25rem 0;
-        color: $cl-nigga;
-        font-size: 0.75rem;
-        background: $cl-orange;
-        display: inline-block;
-        padding: 0.25rem;
-        transform: rotate(-0.25deg);
-        filter: drop-shadow(3px 3px 0 $cl-tomato);
       }
       .category {
         font-weight: 500;
@@ -100,8 +101,6 @@ h5 {
     width: 100%;
     max-width: $mw-container;
     margin: 0 auto;
-    padding: 1.25rem;
-    background-color: $cl-milk;
 
     h1 {
       margin: 1rem 0 2rem 0;
@@ -115,42 +114,34 @@ h5 {
 
       .date {
         margin: 0 0.5rem 0 0;
+        font-weight: 500;
+        font-size: 0.85rem;
+        opacity: 0.85;
       }
       .category {
-        cursor: pointer;
-        padding: 0.25rem 0.5rem 0.25rem 0;
-        color: $cl-nigga;
-        font-size: 0.75rem;
-        background: $cl-orange;
-        display: inline-block;
-        padding: 0.25rem;
-        transform: rotate(-0.25deg);
-        filter: drop-shadow(3px 3px 0 $cl-tomato);
-        cursor: pointer;
+        font-weight: 500;
+        font-size: 0.85rem;
+        opacity: 0.85;
+        color: $cl-primary;
       }
     }
     p,
     pre {
       font-size: 1rem;
       line-height: 1.85rem;
+
+      code {
+        pre {
+          background: $cl-white-2;
+          padding: 1rem;
+          box-shadow: 0 10px 21px rgb(173 178 197 / 17%);
+        }
+      }
     }
     p {
       img {
         max-width: 100% !important;
       }
     }
-  }
-}
-footer {
-  text-align: center;
-
-  a {
-    color: $cl-nigga;
-    background-color: $cl-milk;
-    display: inline-block;
-    padding: 0.25rem 0.5rem;
-    margin: 2rem 0;
-    transform: rotate(-0.25deg);
-    filter: drop-shadow(3px 3px 0 #000);
   }
 }
