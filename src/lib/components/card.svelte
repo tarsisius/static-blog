@@ -4,9 +4,9 @@
 
 <article class="card">
   <a class='title' href={'/' + post.slug}>
-    <h2>
+    <h1>
       {post.title}
-    </h2>
+    </h1>
   </a>
   <p>{post.description}</p>
   <span>
