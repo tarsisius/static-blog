@@ -72,6 +72,8 @@ h5 {
       h1 {
         font-size: 2rem;
         margin: 0;
+        text-decoration: underline;
+        text-decoration-color: $cl-primary;
       }
     }
     p {
