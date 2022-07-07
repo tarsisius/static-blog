@@ -3,7 +3,7 @@
 </script>
 
 <article class="card">
-  <a href={'/' + post.slug}>
+  <a class='title' href={'/' + post.slug}>
     <h2>
       {post.title}
     </h2>
