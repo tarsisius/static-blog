@@ -4,7 +4,7 @@
 
 <script>
   import '$lib/scss/base.scss'
-  import Transition from '../lib/components/transition.svelte'
+  import Transition from '$lib/components/transition.svelte'
 
   export let url
 </script>
@@ -27,3 +27,8 @@
 <Transition {url}>
   <slot />
 </Transition>
+
+<footer>
+  <a href="/">about</a>
+  <a href="/">contact</a>
+</footer>

@@ -30,19 +30,20 @@ h5 {
 .header {
   padding: 0 1rem;
   display: flex;
+  align-items: center;
+  height: 15vh;
   width: 100%;
   max-width: $mw-container;
   margin: auto;
 
   h1 {
-    margin: 4rem auto;
     padding: 1rem 0;
     font-weight: 700;
     font-size: 2.5rem;
     cursor: pointer;
     display: inline-block;
+    margin: 0;
     padding: 0 0.5rem;
-    margin: 2rem 0;
     border-radius: 0.25rem;
     color: #fff;
     background: linear-gradient(0deg, #7a44d6 -25.27%, #e148f1 141.04%);
@@ -52,12 +53,13 @@ h5 {
   }
 }
 .main {
-  margin: 1rem auto 0;
+  margin:0 auto;
   display: flex;
   flex-direction: column;
   max-width: 720px;
   width: 100%;
-  padding: 0 1rem;
+  padding: 1rem;
+  min-height: 75vh;
 
   .card {
     display: flex;
@@ -65,14 +67,17 @@ h5 {
     margin-bottom: 1.5rem;
     width: 100%;
     padding: 0 1rem;
-    background-color: $cl-white-1;  
+    background-color: $cl-white-1;
     overflow: hidden;
     box-shadow: 0 10px 21px rgb(173 178 197 / 17%);
 
-    h2 {
-      margin: 1rem 0 1rem 0;
+    a {
+      h2 {
+        margin: 1rem 0 1rem 0;
+      }
     }
     p {
+      line-height: 1.85rem;
       margin: 0 0 1rem 0;
     }
     span {
@@ -143,5 +148,15 @@ h5 {
         max-width: 100% !important;
       }
     }
+  }
+}
+footer {
+  display: flex;
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+   
+  a {
+    margin: 0 1rem 0 0;
   }
 }

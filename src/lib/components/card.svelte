@@ -3,9 +3,11 @@
 </script>
 
 <article class="card">
-  <h2>
-    <a href={'/' + post.slug}>{post.title}</a>
-  </h2>
+  <a href={'/' + post.slug}>
+    <h2>
+      {post.title}
+    </h2>
+  </a>
   <p>{post.description}</p>
   <span>
     <a class="date" href="/">
