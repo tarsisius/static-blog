@@ -17,6 +17,8 @@
   </a>
 </header>
 
+<slot />
+
 <footer>
   <a href="/">about</a>
   <a href="/">contact</a>
