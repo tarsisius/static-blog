@@ -10,9 +10,9 @@
   </a>
   <p>{post.description}</p>
   <span>
-    <a class="date" href="/">
+    <p class="date">
       {post.date}
-    </a>
+    </p>
     <a class="category" href="/">
       #{post.category}
     </a>

@@ -20,7 +20,7 @@
 
 <header class="header">
   <a href="/">
-    <h1>%</h1>
+    <h1>T</h1>
   </a>
 </header>
 

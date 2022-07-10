@@ -72,8 +72,6 @@ h5 {
       h1 {
         font-size: 2rem;
         margin: 0;
-        text-decoration: underline;
-        text-decoration-color: $cl-primary;
       }
     }
     p {
@@ -90,6 +88,7 @@ h5 {
         font-size: 0.85rem;
         opacity: 0.85;
         margin: 0 1rem 0 0;
+        line-height: unset;
       }
       .category {
         font-weight: 500;
