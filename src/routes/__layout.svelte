@@ -1,12 +1,5 @@
-<script context="module">
-  export const load = async ({ url }) => ({ props: { url } })
-</script>
-
 <script>
   import '$lib/scss/base.scss'
-  import Transition from '$lib/components/transition.svelte'
-
-  export let url
 </script>
 
 <svelte:head>
@@ -23,10 +16,6 @@
     <h1>T</h1>
   </a>
 </header>
-
-<Transition {url}>
-  <slot />
-</Transition>
 
 <footer>
   <a href="/">about</a>
