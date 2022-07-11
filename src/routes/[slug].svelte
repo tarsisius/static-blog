@@ -1,6 +1,8 @@
 <script context="module">
-  export function load({ props }) {
-    if (!props.post) {
+  export async function load({ fetch, params }) {
+    const res = await fetch(`/${params.slug}.json`)
+    
+    if (!res.ok) {
       return {
         status: 404,
         error: 'Post not found',
@@ -9,7 +11,7 @@
 
     return {
       props: {
-        post: props.post,
+        post: await res.json(),
       },
     }
   }

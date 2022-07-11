@@ -1,3 +1,15 @@
+<script context="module">
+  export async function load({ fetch }) {
+    const res = await fetch('/.json')
+    const { posts } = await res.json()
+    return {
+      props: {
+        posts,
+      },
+    }
+  }
+</script>
+
 <script>
   import Card from '$lib/card.svelte'
   export let posts

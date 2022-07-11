@@ -20,9 +20,7 @@ export const get = ({ params }) => {
   const check = exists(file)
   if (!check) {
     return {
-      body: {
-        status: 404,
-      },
+      status: 404,
     }
   }
 
@@ -41,7 +39,7 @@ export const get = ({ params }) => {
 
   return {
     body: {
-      post,
+      ...post,
     },
   }
 }
