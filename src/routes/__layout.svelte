@@ -1,5 +1,6 @@
 <script>
-  import '$lib/scss/base.scss'
+  import '../app.css'
+  import 'highlight.js/styles/github.css'
 </script>
 
 <svelte:head>

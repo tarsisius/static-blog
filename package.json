@@ -12,12 +12,9 @@
 		"@sveltejs/adapter-static": "next",
 		"@sveltejs/kit": "next",
 		"gray-matter": "^4.0.3",
-		"html-minifier": "^4.0.0",
+		"highlight.js": "^11.5.1",
 		"marked": "^4.0.17",
-		"sass": "^1.53.0",
-		"shiki": "^0.10.1",
-		"svelte": "^3.44.0",
-		"svelte-preprocess": "^4.10.7"
+		"svelte": "^3.44.0"
 	},
 	"type": "module"
 }

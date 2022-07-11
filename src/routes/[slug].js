@@ -1,40 +1,40 @@
 import path from 'path'
 import fs from 'fs'
-import shiki from 'shiki'
+import hljs from 'highlight.js'
 import { marked } from 'marked'
 import matter from 'gray-matter'
 
-export const get = async ({ params }) => {
+export const get = ({ params }) => {
   const dir = path.join(process.cwd(), 'content')
   const slug = params.slug
   const file = path.join(dir, `${slug}.md`)
 
-  const exists = async (path) => {
+  const exists = (path) => {
     try {
-      await fs.promises.access(path)
+      fs.accessSync(path)
       return true
     } catch {
       return false
     }
   }
-  const check = await exists(file)
+  const check = exists(file)
   if (!check) {
     return {
       status: 404,
     }
   }
 
-  const read = await fs.promises.readFile(file, 'utf-8')
+  const read = fs.readFileSync(file, 'utf-8')
   const { data, content } = matter(read)
 
-  const html = await shiki
-    .getHighlighter({ theme: 'light-plus' })
-    .then((highlighter) => {
-      return marked.setOptions({
-        highlight: (code, lang) => highlighter.codeToHtml(code, { lang }),
-      })(content)
-    })
+  marked.setOptions({
+    highlight: (code, lang) => {
+      const language = hljs.getLanguage(lang) ? lang : 'plaintext'
+      return hljs.highlight(code, { language }).value
+    },
+  })
 
+  const html = marked(content)
   const post = { slug, html, ...data }
 
   return {
