@@ -1,14 +1,15 @@
 <script context="module">
-  export const load = ({ props }) => {
-    const post = props.post
-    if (!post) {
+  export function load({ props }) {
+    if (!props.post) {
       return {
         status: 404,
+        error: 'Post not found',
       }
     }
+
     return {
       props: {
-        post,
+        post: props.post,
       },
     }
   }
@@ -23,9 +24,9 @@
   <meta name="description" content={post.description} />
   <meta property="og:description" content={post.description} />
   <meta name="twitter:description" content={post.description} />
-  <title>{post.title}</title>
   <meta property="og:title" content={post.title} />
   <meta name="twitter:title" content={post.title} />
+  <title>{post.title}</title>
 </svelte:head>
 
 <main class="main">

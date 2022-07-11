@@ -20,7 +20,9 @@ export const get = ({ params }) => {
   const check = exists(file)
   if (!check) {
     return {
-      status: 404,
+      body: {
+        status: 404,
+      },
     }
   }
 
